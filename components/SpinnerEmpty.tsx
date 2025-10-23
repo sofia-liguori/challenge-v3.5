@@ -8,7 +8,7 @@ import { Spinner } from "@/components/ui/spinner"
 
 export default function SpinnerEmpty() {
   return (
-    <Empty className="w-full flex">
+    <Empty className="w-full flex h-full justify-center">
       <EmptyHeader>
         <EmptyMedia variant="icon">
           <Spinner />

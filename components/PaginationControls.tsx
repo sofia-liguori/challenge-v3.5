@@ -9,47 +9,40 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
-import { useState } from "react";
-import { useSearchParams } from "next/navigation";
 
-export default function PaginationControls() {
-  let pageNumber = Number(useSearchParams().get("page")) ?? 0;
+export default function PaginationControls({ page }: { page: number }) {
+  let pageNumber = page;
   pageNumber < 1 && (pageNumber = 1);
-
-  const [currentPage, setCurrentPage] = useState(pageNumber);
 
   return (
     <Pagination className="pb-5">
       <PaginationContent>
-        {currentPage > 1 && (
+        {pageNumber > 1 && (
           <>
             <PaginationItem>
               <PaginationPrevious
-                href={`?page=${currentPage - 1}`}
-                onClick={() => setCurrentPage(currentPage - 1)}
+                href={`?page=${pageNumber - 1}`}
               />
             </PaginationItem>
             <PaginationItem>
               <PaginationLink
-                href={`?page=${currentPage - 1}`}
-                onClick={() => setCurrentPage(currentPage - 1)}
+                href={`?page=${pageNumber - 1}`}
               >
-                {currentPage - 1}
+                {pageNumber - 1}
               </PaginationLink>
             </PaginationItem>
           </>
         )}
         <PaginationItem>
-          <PaginationLink href={`?page=${currentPage}`} isActive>
-            {currentPage}
+          <PaginationLink href={`?page=${pageNumber}`} isActive>
+            {pageNumber}
           </PaginationLink>
         </PaginationItem>
         <PaginationItem>
           <PaginationLink
-            href={`?page=${currentPage + 1}`}
-            onClick={() => setCurrentPage(currentPage + 1)}
+            href={`?page=${pageNumber + 1}`}
           >
-            {currentPage + 1}
+            {pageNumber + 1}
           </PaginationLink>
         </PaginationItem>
         <PaginationItem>
@@ -57,8 +50,7 @@ export default function PaginationControls() {
         </PaginationItem>
         <PaginationItem>
           <PaginationNext
-            href={`?page=${currentPage + 1}`}
-            onClick={() => setCurrentPage(currentPage + 1)}
+            href={`?page=${pageNumber + 1}`}
           />
         </PaginationItem>
       </PaginationContent>
