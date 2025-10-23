@@ -35,18 +35,18 @@ export default function CharacterCard(character: Character) {
     <Dialog>
       <DialogTrigger asChild>
         <Card className="cursor-pointer hover:bg-accent">
-          <CardHeader>
-            <CardTitle>{character.name.full}</CardTitle>
+          <CardHeader >
+            <CardTitle>{character.name.full}</CardTitle> 
             {/* <CardDescription className="max-h-80"><p className="text-wrap truncate">{character.description}</p></CardDescription> */}
             {/* <CardAction>Card Action</CardAction> */}
           </CardHeader>
           <CardContent>
             <img
-              height="400"
               alt={`Image of ${character.name.full}`}
               src={character.image.medium}
-              className="rounded-sm"
+              className="rounded-sm h-40"
             />
+            {/* <CardTitle className="pt-4">{character.name.full}</CardTitle> */}
             {/* <p className="text-wrap truncate">{character.description}</p> */}
           </CardContent>
           {/* <CardFooter>
@@ -55,8 +55,8 @@ export default function CharacterCard(character: Character) {
         </Card>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
-        <DialogHeader>
-          <DialogTitle>Character Information</DialogTitle>
+        <DialogHeader >
+          <DialogTitle >Character Information</DialogTitle>
         </DialogHeader>
         <p>{character.description}</p>
         <DialogFooter>

@@ -54,7 +54,8 @@ const GET_CHARACTERS: TypedDocumentNode<CharacterData> = gql`
   }
 `;
 
-export default function Gallery({ page, perPage }: GalleryProps) {
+export default function Gallery({page, perPage}: GalleryProps) {
+
   const { data } = useSuspenseQuery(GET_CHARACTERS, { variables: { page, perPage }});
   return (
     <Suspense fallback={<div>Loading...</div>}>
