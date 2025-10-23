@@ -13,6 +13,7 @@ export async function getSession(shouldSleep = true) {
   if (!session.isLoggedIn) {
     session.isLoggedIn = defaultSession.isLoggedIn;
     session.username = defaultSession.username;
+    session.jobTitle = defaultSession.jobTitle;
   }
 
   if (shouldSleep) {
