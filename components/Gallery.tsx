@@ -3,7 +3,6 @@
 import { gql, TypedDocumentNode } from "@apollo/client";
 import { useSuspenseQuery } from "@apollo/client/react";
 import CharacterCard from "./CharacterCard";
-import { Suspense } from "react";
 
 interface CharacterData {
   Page: {
