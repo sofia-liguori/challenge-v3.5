@@ -1,12 +1,10 @@
-import Image from "next/image";
+import Login from "@/components/Login";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <div>
-          Basic
-        </div>
+    <div className="flex flex-grow h-auto justify-center font-sans dark:bg-black">
+      <main className="flex flex-col w-full max-w-3xl min-h-screen items-center content-center  dark:bg-black">
+        <Login />
       </main>
     </div>
   );
