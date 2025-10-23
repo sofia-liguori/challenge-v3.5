@@ -1,7 +1,7 @@
 "use server";
 
 import { redirect } from "next/navigation";
-import { getSession } from "../actions";
+import { getSession } from "@/auth/actions";
 import InformationSection from "@/components/InformationSection";
 
 export default async function information() {

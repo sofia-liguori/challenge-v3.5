@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { getSession, logout, updateData } from "../app/actions";
+import { getSession, logout, updateData } from "@/auth/actions";
 import { UserCog, LogOut } from "lucide-react";
 
 export default async function UserControls() {
@@ -24,7 +24,11 @@ export default async function UserControls() {
       <p className="text-xs font-semibold px-4">{session.username}</p>
       <Dialog>
         <DialogTrigger asChild>
-          <Button variant="ghost" title="User Settings" className="cursor-pointer">
+          <Button
+            variant="ghost"
+            title="User Settings"
+            className="cursor-pointer"
+          >
             <UserCog />
           </Button>
         </DialogTrigger>
@@ -53,14 +57,23 @@ export default async function UserControls() {
               </div>
             </div>
             <div className="flex flex-row-reverse pt-6">
-            <Button type="submit" className="cursor-pointer" formAction={updateData}>
-              Update
-            </Button>
+              <Button
+                type="submit"
+                className="cursor-pointer"
+                formAction={updateData}
+              >
+                Update
+              </Button>
             </div>
           </form>
         </DialogContent>
       </Dialog>
-      <Button variant="ghost" title="Logout" className="cursor-pointer" onClick={logout}>
+      <Button
+        variant="ghost"
+        title="Logout"
+        className="cursor-pointer"
+        onClick={logout}
+      >
         <LogOut />
       </Button>
     </div>

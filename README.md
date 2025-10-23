@@ -4,12 +4,12 @@ This project is a Next.js application (v16.0.0) designed to display character in
 
 ## Features
 
-*   **Next.js 16.0.0**: A React framework for building full-stack web applications.
-*   **Apollo Client**: For efficient data fetching and management with GraphQL.
-*   **Authentication**: Implemented using `iron-session` for secure user sessions.
-*   **Character Gallery**: Displays a list of characters with details, fetched from a GraphQL endpoint.
-*   **Responsive UI**: Styled with Tailwind CSS and utilizes Radix UI components for accessibility and modern design.
-*   **TypeScript**: Entire codebase is written in TypeScript for type safety.
+- **Next.js 16.0.0**: A React framework for building full-stack web applications.
+- **Apollo Client**: For efficient data fetching and management with GraphQL.
+- **Authentication**: Implemented using `iron-session` for secure user sessions.
+- **Character Gallery**: Displays a list of characters with details, fetched from a GraphQL endpoint.
+- **Responsive UI**: Styled with Tailwind CSS and utilizes Radix UI components for accessibility and modern design.
+- **TypeScript**: Entire codebase is written in TypeScript for type safety.
 
 ## Getting Started
 
@@ -19,8 +19,8 @@ Follow these steps to set up and run the project locally.
 
 Ensure you have the following installed:
 
-*   Node.js (v18 or higher recommended)
-*   pnpm (or npm/yarn)
+- Node.js (v18 or higher recommended)
+- pnpm (or npm/yarn)
 
 ### Installation
 
@@ -56,8 +56,8 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to see the a
 
 To learn more about Next.js, take a look at the following resources:
 
-*   [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-*   [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 

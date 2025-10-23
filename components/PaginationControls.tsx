@@ -13,7 +13,7 @@ import { useState } from "react";
 import { useSearchParams } from "next/navigation";
 
 export default function PaginationControls() {
-  let pageNumber = (Number(useSearchParams().get("page")) ?? 0);
+  let pageNumber = Number(useSearchParams().get("page")) ?? 0;
   pageNumber < 1 && (pageNumber = 1);
 
   const [currentPage, setCurrentPage] = useState(pageNumber);

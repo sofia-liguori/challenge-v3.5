@@ -20,7 +20,7 @@ export const sessionOptions: SessionOptions = {
     httpOnly: true,
     // Secure only works in `https` environments. So if the environment is `https`, it'll return true.
     secure: process.env.NODE_ENV === "production",
-  }
+  },
 };
 
 export function sleep(ms: number) {

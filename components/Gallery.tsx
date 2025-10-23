@@ -22,7 +22,7 @@ interface CharacterData {
         image: {
           medium: string;
         };
-      }
+      },
     ];
   };
 }
@@ -54,9 +54,10 @@ const GET_CHARACTERS: TypedDocumentNode<CharacterData> = gql`
   }
 `;
 
-export default function Gallery({page, perPage}: GalleryProps) {
-
-  const { data } = useSuspenseQuery(GET_CHARACTERS, { variables: { page, perPage }});
+export default function Gallery({ page, perPage }: GalleryProps) {
+  const { data } = useSuspenseQuery(GET_CHARACTERS, {
+    variables: { page, perPage },
+  });
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <div className="flex flex-wrap gap-4 justify-evenly pb-10">
