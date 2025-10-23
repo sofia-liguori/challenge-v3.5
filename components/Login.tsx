@@ -36,7 +36,6 @@ export default async function Login() {
                 id="username"
                 name="username"
                 type="text"
-                placeholder="@username"
                 required
               />
             </div>

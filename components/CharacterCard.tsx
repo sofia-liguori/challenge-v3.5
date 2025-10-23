@@ -28,7 +28,7 @@ export default function CharacterCard(character: Character) {
             <img
               alt={`Image of ${character.name.full}`}
               src={character.image.medium}
-              className="rounded-sm h-35 mb-3"
+              className="rounded-md h-35 mb-3"
             />
             <CardTitle>{character.name.full}</CardTitle>
           </CardContent>

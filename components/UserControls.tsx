@@ -3,10 +3,8 @@
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
-  DialogClose,
   DialogContent,
   DialogDescription,
-  DialogFooter,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
@@ -21,7 +19,7 @@ export default async function UserControls() {
 
   return (
     <div className="flex flex-end items-center">
-      <p className="text-xs font-semibold px-4">{session.username}</p>
+      <p className="text-xs font-semibold px-4">@{session.username}</p>
       <Dialog>
         <DialogTrigger asChild>
           <Button

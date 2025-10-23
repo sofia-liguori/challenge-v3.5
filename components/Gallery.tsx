@@ -59,12 +59,10 @@ export default function Gallery({ page, perPage }: GalleryProps) {
     variables: { page, perPage },
   });
   return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <div className="flex flex-wrap gap-4 justify-evenly pb-10">
+      <div className="flex flex-wrap gap-6 justify-evenly pb-10">
         {data.Page.characters.map((character) => (
           <CharacterCard {...character} key={character.id} />
         ))}
       </div>
-    </Suspense>
   );
 }

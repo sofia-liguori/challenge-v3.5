@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} antialiased`}>
-        <header className="h-auto py-10 ">
+        <header className="h-auto py-15 ">
           <Header />
         </header>
         <ApolloWrapper>{children}</ApolloWrapper>
