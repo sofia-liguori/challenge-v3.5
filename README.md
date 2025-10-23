@@ -52,30 +52,6 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) in your browser to see the application. The page will automatically reload as you make changes.
 
-## Project Structure
-
-*   `app/`: Contains Next.js pages, layouts, and API routes.
-    *   `app/page.tsx`: The main entry point, displaying the login component.
-    *   `app/layout.tsx`: Root layout for the application, including `Header` and `ApolloWrapper`.
-    *   `app/ApolloWrapper.tsx`: Configures and provides the Apollo Client to the application.
-    *   `app/actions.ts`: Server actions for various functionalities.
-    *   `app/information/page.tsx`: Information page.
-*   `auth/`: Authentication-related utilities.
-    *   `auth/lib.ts`: Authentication logic.
-    *   `auth/use-session.ts`: Hook for managing user sessions.
-*   `components/`: Reusable React components.
-    *   `components/Login.tsx`: User login interface.
-    *   `components/Gallery.tsx`: Fetches and displays character data.
-    *   `components/CharacterCard.tsx`: Displays individual character details.
-    *   `components/Header.tsx`: Application header.
-    *   `components/PaginationControls.tsx`: Controls for navigating through character pages.
-    *   `components/UserControls.tsx`: User-related controls (e.g., logout).
-    *   `components/InformationSection.tsx`: Section for displaying additional information.
-    *   `components/ui/`: UI components built with Radix UI and styled with Tailwind CSS.
-*   `lib/`: Utility functions.
-    *   `lib/utils.ts`: General utility functions.
-*   `public/`: Static assets.
-
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
