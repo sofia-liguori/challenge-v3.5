@@ -16,8 +16,8 @@ export default function InformationSection() {
       <main className="flex flex-col min-h-screen w-full max-w-3xl items-center dark:bg-black sm:items-start">
         <Suspense fallback={<SpinnerEmpty />}>
           <Gallery page={pageNumber} perPage={perPage} />
-        </Suspense>
-        <PaginationControls />
+          <PaginationControls page={pageNumber} />
+        </Suspense>  
       </main>
     </div>
   );
