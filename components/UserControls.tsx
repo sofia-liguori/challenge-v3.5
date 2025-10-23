@@ -24,7 +24,7 @@ export default async function UserControls() {
       <p className="text-xs font-semibold px-4">{session.username}</p>
       <Dialog>
         <DialogTrigger asChild>
-          <Button variant="ghost" className="cursor-pointer">
+          <Button variant="ghost" title="User Settings" className="cursor-pointer">
             <UserCog />
           </Button>
         </DialogTrigger>
@@ -52,16 +52,15 @@ export default async function UserControls() {
                 />
               </div>
             </div>
-            <DialogClose asChild>
-              <Button variant="ghost">Cancel</Button>
-            </DialogClose>
-            <Button type="submit" formAction={updateData}>
+            <div className="flex flex-row-reverse pt-6">
+            <Button type="submit" className="cursor-pointer" formAction={updateData}>
               Update
             </Button>
+            </div>
           </form>
         </DialogContent>
       </Dialog>
-      <Button variant="ghost" className="cursor-pointer" onClick={logout}>
+      <Button variant="ghost" title="Logout" className="cursor-pointer" onClick={logout}>
         <LogOut />
       </Button>
     </div>

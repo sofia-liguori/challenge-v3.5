@@ -19,7 +19,7 @@ export default function PaginationControls() {
   const [currentPage, setCurrentPage] = useState(pageNumber);
 
   return (
-    <Pagination>
+    <Pagination className="pb-5">
       <PaginationContent>
         {currentPage > 1 && (
           <>

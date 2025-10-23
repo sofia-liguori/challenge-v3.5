@@ -46,10 +46,11 @@ export default async function Login() {
               <Input id="jobTitle" type="text" name="jobTitle" required />
             </div>
           </div>
-          <Button type="submit">Enter</Button>
+          <div className="flex flex-row-reverse pt-6">
+            <Button className="cursor-pointer" type="submit">Enter</Button>
+          </div>
         </form>
       </CardContent>
-      <CardFooter className="flex-col gap-2"></CardFooter>
     </Card>
   );
 }

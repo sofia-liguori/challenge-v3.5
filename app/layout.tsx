@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Challenge v3.5"
+  title: "Challenge v3.5",
 };
 
 export default function RootLayout({
@@ -25,13 +25,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <header className="h-30 pt-10 "><Header /></header>
+        <header className="h-auto py-10 ">
+          <Header />
+        </header>
         <ApolloWrapper>{children}</ApolloWrapper>
-        <footer className="h-10 pt-2 bg-black text-white flex justify-center text-sm sticky bottom-0">Sofia Liguori | v3.5</footer>    
+        <footer className="h-10 pt-2 bg-slate-900 text-slate-400 flex justify-center text-sm bottom-0 sticky">
+          Sofia Liguori | v3.5
+        </footer>
       </body>
     </html>
   );

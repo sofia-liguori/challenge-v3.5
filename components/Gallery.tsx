@@ -59,7 +59,7 @@ export default function Gallery({page, perPage}: GalleryProps) {
   const { data } = useSuspenseQuery(GET_CHARACTERS, { variables: { page, perPage }});
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <div className="flex flex-wrap gap-4 justify-center pb-10">
+      <div className="flex flex-wrap gap-4 justify-evenly pb-10">
         {data.Page.characters.map((character) => (
           <CharacterCard {...character} key={character.id} />
         ))}
